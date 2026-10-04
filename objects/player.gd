@@ -38,11 +38,6 @@ func _ready() -> void:
 	set_sword_drawn(swordDrawn)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 # Testing: F1 switches between the male and female models, F2 gets hit,
 # F3 dies (or revives when already dead) and F4 gets knocked down.
 func _unhandled_input(event: InputEvent) -> void:
@@ -93,17 +88,13 @@ func is_dead() -> bool:
 # Plays an animation on both models, blending from the current one.
 # blendTime -1 uses the AnimationPlayer's default blend time.
 # A model can have its own version of an animation in its "model" library
-# (e.g. the male strafes); it's used instead of the shared one. A model that
-# doesn't have the animation at all (e.g. the female only idle variations)
-# keeps playing what it was playing.
+# (e.g. the male strafes); it's used instead of the shared one.
 # speed: playback speed multiplier (e.g. faster attacks).
 func play_animation(animationName: StringName, backwards := false, blendTime := -1.0, speed := 1.0) -> void:
 	for animationPlayer in animationPlayers:
 		var fullName := animationName
 		if animationPlayer.has_animation(MODEL_LIBRARY + animationName):
 			fullName = MODEL_LIBRARY + animationName
-		elif not animationPlayer.has_animation(animationName):
-			continue
 		# play() on the animation already playing keeps going, so restart it.
 		if animationPlayer.assigned_animation == fullName:
 			animationPlayer.stop()
@@ -140,20 +131,6 @@ func set_sheath_blend(progress: float) -> void:
 		var hand: Node3D = model.get_node("Armature/Skeleton3D/RightHand/SwordBronzeModel")
 		var rest: Transform3D = back.get_parent().global_transform * sheathRest[model]
 		back.global_transform = rest.interpolate_with(hand.global_transform, weight)
-
-
-# Idle variations the visible model has in its own library: the ones named
-# "<prefix>_N" (e.g. "idle_variation" with the sword drawn and
-# "idle_sheathed_variation" with it sheathed).
-func get_idle_variations(prefix: String) -> Array[StringName]:
-	var variations: Array[StringName] = []
-	var animationPlayer := get_visible_animation_player()
-	var library := MODEL_LIBRARY.trim_suffix("/")
-	if animationPlayer.has_animation_library(library):
-		for animationName in animationPlayer.get_animation_library(library).get_animation_list():
-			if String(animationName).begins_with(prefix + "_"):
-				variations.append(animationName)
-	return variations
 
 
 func get_visible_animation_player() -> AnimationPlayer:

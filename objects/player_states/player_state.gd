@@ -52,10 +52,6 @@ func get_move_direction() -> String:
 	return ""
 
 
-func is_moving_backwards() -> bool:
-	return get_move_direction() == "back"
-
-
 # Run key held while moving.
 func is_running() -> bool:
 	return is_moving() and Input.is_action_pressed("run")
