@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://5uf6w7g44500"]
 
 [ext_resource type="Script" uid="uid://cg1b31aih20fi" path="res://objects/player.gd" id="1_eqqp1"]
-[ext_resource type="PackedScene" uid="uid://c21qg8ra5wce3" path="res://assets/image/3d/inherit_models/char_male_model.tscn" id="2_m4l3c"]
-[ext_resource type="PackedScene" uid="uid://b2epom3db4lfq" path="res://assets/image/3d/inherit_models/char_female_model.tscn" id="3_f3m4l"]
+[ext_resource type="PackedScene" uid="uid://c21qg8ra5wce3" path="res://assets/image/3d/inherit_models/characters/char_male_model.tscn" id="2_m4l3c"]
+[ext_resource type="PackedScene" uid="uid://b2epom3db4lfq" path="res://assets/image/3d/inherit_models/characters/char_female_model.tscn" id="3_f3m4l"]
 [ext_resource type="Script" uid="uid://di3aug0e2vwmm" path="res://scripts/state_machine/state_machine.gd" id="4_s7m4c"]
 [ext_resource type="Script" uid="uid://bivok4i5kw0fc" path="res://objects/player_states/idle.gd" id="5_i1d3l"]
 [ext_resource type="Script" uid="uid://c640gcg4kwnc8" path="res://objects/player_states/move.gd" id="6_r4n0p"]

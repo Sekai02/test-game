@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxu1ctdxg10yw"
-path.s3tc="res://.godot/imported/char_female_body_base_color.png-ffe3f9ea02410f5d9af0ecc5f508ae51.s3tc.ctex"
+path.s3tc="res://.godot/imported/char_female_body_base_color.png-3ebdae4765f7b9d3f0399cae9e366b87.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/image/3d/glb/char_female_body_base_color.png"
-dest_files=["res://.godot/imported/char_female_body_base_color.png-ffe3f9ea02410f5d9af0ecc5f508ae51.s3tc.ctex"]
+source_file="res://assets/image/3d/glb/characters/char_female/char_female_body_base_color.png"
+dest_files=["res://.godot/imported/char_female_body_base_color.png-3ebdae4765f7b9d3f0399cae9e366b87.s3tc.ctex"]
 
 [params]
 

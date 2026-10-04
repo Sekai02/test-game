@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://d36qwgff5736y"]
-
-[ext_resource type="PackedScene" uid="uid://7jto4be2bf0h" path="res://assets/image/3d/glb/sword_bronze.glb" id="1_s0b7z"]
-
-[node name="SwordBronzeModel" unique_id=1276403158 instance=ExtResource("1_s0b7z")]

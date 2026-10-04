@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c21qg8ra5wce3"]
 
-[ext_resource type="PackedScene" uid="uid://cs2ds7wde8l01" path="res://assets/image/3d/glb/char_male.glb" id="1_m4l3c"]
-[ext_resource type="AnimationLibrary" uid="uid://cfklftc3xuf0u" path="res://assets/animations/player_animations.res" id="2_a5n1m"]
-[ext_resource type="PackedScene" uid="uid://d36qwgff5736y" path="res://assets/image/3d/inherit_models/sword_bronze_model.tscn" id="3_s0b7z"]
-[ext_resource type="AnimationLibrary" uid="uid://cmect5l6hawk5" path="res://assets/animations/male_animations.res" id="4_m4l3a"]
+[ext_resource type="PackedScene" uid="uid://cs2ds7wde8l01" path="res://assets/image/3d/glb/characters/char_male/char_male.glb" id="1_m4l3c"]
+[ext_resource type="AnimationLibrary" uid="uid://cfklftc3xuf0u" path="res://assets/animations/player/player_animations.res" id="2_a5n1m"]
+[ext_resource type="PackedScene" uid="uid://d36qwgff5736y" path="res://assets/image/3d/inherit_models/weapons/sword_bronze_model.tscn" id="3_s0b7z"]
+[ext_resource type="AnimationLibrary" uid="uid://cmect5l6hawk5" path="res://assets/animations/player/male_animations.res" id="4_m4l3a"]
 [ext_resource type="Script" uid="uid://bv6fkox8fqa0f" path="res://components/left_hand_grip.gd" id="5_g1r9p"]
 [ext_resource type="Script" uid="uid://camejhpkbhfxq" path="res://components/left_hand_goal_sync.gd" id="6_l7s2y"]
 

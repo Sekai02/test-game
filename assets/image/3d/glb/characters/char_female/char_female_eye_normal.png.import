@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ts1ai7gu4y1j"
-path.s3tc="res://.godot/imported/char_female_body_normal.png-fa0c797afc735ef7f75e41a9d0ed90b3.s3tc.ctex"
+uid="uid://dgo43ejh3sg48"
+path.s3tc="res://.godot/imported/char_female_eye_normal.png-88600fdcf4a1e2cfee8927d460a5f0d9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e6abc1d889509e3bdb098c367b9f023f"
+"md5": "7ed2e7955e0e1302999bb8b15f56ecf6"
 }
 
 [deps]
 
-source_file="res://assets/image/3d/glb/char_female_body_normal.png"
-dest_files=["res://.godot/imported/char_female_body_normal.png-fa0c797afc735ef7f75e41a9d0ed90b3.s3tc.ctex"]
+source_file="res://assets/image/3d/glb/characters/char_female/char_female_eye_normal.png"
+dest_files=["res://.godot/imported/char_female_eye_normal.png-88600fdcf4a1e2cfee8927d460a5f0d9.s3tc.ctex"]
 
 [params]
 
@@ -30,7 +30,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://assets/image/3d/glb/char_female_body_normal.png"
+roughness/src_normal="res://assets/image/3d/glb/characters/char_female/char_female_eye_normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

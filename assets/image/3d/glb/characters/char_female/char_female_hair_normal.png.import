@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da5617kkotnek"
-path.s3tc="res://.godot/imported/char_male_body_base_color.png-5cb7d8a5733609ee6bf9ce43ceba10ba.s3tc.ctex"
+uid="uid://cet3wknt55mgr"
+path.s3tc="res://.godot/imported/char_female_hair_normal.png-6a864717ad626fe08e1cebdfb388fa1b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "a510817b2732d2de6bacce0e9096e4ce"
+"md5": "fe4d11c18a959538dc53b84ffaac9a0f"
 }
 
 [deps]
 
-source_file="res://assets/image/3d/glb/char_male_body_base_color.png"
-dest_files=["res://.godot/imported/char_male_body_base_color.png-5cb7d8a5733609ee6bf9ce43ceba10ba.s3tc.ctex"]
+source_file="res://assets/image/3d/glb/characters/char_female/char_female_hair_normal.png"
+dest_files=["res://.godot/imported/char_female_hair_normal.png-6a864717ad626fe08e1cebdfb388fa1b.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://assets/image/3d/glb/characters/char_female/char_female_hair_normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

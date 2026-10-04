@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rm58pt0bw5qr"
-path.s3tc="res://.godot/imported/char_male_hair_base_color.png-1028fcfacfc6fd5f91623b9c64db7907.s3tc.ctex"
+uid="uid://f41gh0eknvnd"
+path.s3tc="res://.godot/imported/char_male_body_roughness.png-03cd322c3f51cda08bf32409b778abb2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "f30cc84cd1ee4fa1c40e16f1acadff7b"
+"md5": "075886a4960c8d82728636977778e7a6"
 }
 
 [deps]
 
-source_file="res://assets/image/3d/glb/char_male_hair_base_color.png"
-dest_files=["res://.godot/imported/char_male_hair_base_color.png-1028fcfacfc6fd5f91623b9c64db7907.s3tc.ctex"]
+source_file="res://assets/image/3d/glb/characters/char_male/char_male_body_roughness.png"
+dest_files=["res://.godot/imported/char_male_body_roughness.png-03cd322c3f51cda08bf32409b778abb2.s3tc.ctex"]
 
 [params]
 

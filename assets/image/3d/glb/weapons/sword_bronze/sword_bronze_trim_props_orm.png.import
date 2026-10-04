@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddccvccmu74av"
-path.s3tc="res://.godot/imported/char_female_eye_base_color.png-d596cebe61418ccf017476b464962741.s3tc.ctex"
+uid="uid://gsfkns4fjoog"
+path.s3tc="res://.godot/imported/sword_bronze_trim_props_orm.png-ef0d1dc7610ac40e637fc2150fe56908.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "830da396e71092b8bf809e8c522e8638"
+"md5": "aa406e97c60fa88ad025e232a5fb2604"
 }
 
 [deps]
 
-source_file="res://assets/image/3d/glb/char_female_eye_base_color.png"
-dest_files=["res://.godot/imported/char_female_eye_base_color.png-d596cebe61418ccf017476b464962741.s3tc.ctex"]
+source_file="res://assets/image/3d/glb/weapons/sword_bronze/sword_bronze_trim_props_orm.png"
+dest_files=["res://.godot/imported/sword_bronze_trim_props_orm.png-ef0d1dc7610ac40e637fc2150fe56908.s3tc.ctex"]
 
 [params]
 
