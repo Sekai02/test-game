@@ -4,3 +4,6 @@
 
 [node name="FollowChar" type="Node3D" unique_id=2002642730]
 script = ExtResource("1_1524a")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1068357921]
+current = true

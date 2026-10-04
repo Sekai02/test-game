@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://b2epom3db4lfq"]
+
+[ext_resource type="PackedScene" uid="uid://bwkbaex5vnbi8" path="res://assets/image/3d/glb/char_female.glb" id="1_f3m4l"]
+[ext_resource type="AnimationLibrary" uid="uid://cfklftc3xuf0u" path="res://assets/animations/player_animations.res" id="2_a5n1m"]
+[ext_resource type="PackedScene" uid="uid://d36qwgff5736y" path="res://assets/image/3d/inherit_models/sword_bronze_model.tscn" id="3_s0b7z"]
+[ext_resource type="AnimationLibrary" uid="uid://u00jvbijgxwp" path="res://assets/animations/female_animations.res" id="4_f3m4a"]
+[ext_resource type="Script" uid="uid://bv6fkox8fqa0f" path="res://components/left_hand_grip.gd" id="5_g1r9p"]
+[ext_resource type="Script" uid="uid://camejhpkbhfxq" path="res://components/left_hand_goal_sync.gd" id="6_l7s2y"]
+
+[node name="CharFemaleModel" unique_id=896241037 instance=ExtResource("1_f3m4l")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=530172846]
+libraries = {
+&"": ExtResource("2_a5n1m"),
+&"model": ExtResource("4_f3m4a")
+}
+autoplay = &"idle"
+playback_default_blend_time = 0.15
+
+[node name="RightHand" type="BoneAttachment3D" parent="Armature/Skeleton3D" unique_id=1147852093]
+bone_name = "hand_r"
+
+[node name="SwordBronzeModel" parent="Armature/Skeleton3D/RightHand" unique_id=689213570 instance=ExtResource("3_s0b7z")]
+transform = Transform3D(0, 0, 1, 1, 0, 0, 0, 1, 0, -0.035, 0.085, 0)
+
+[node name="LeftHandTarget" type="Marker3D" parent="Armature/Skeleton3D/RightHand/SwordBronzeModel" unique_id=582910374]
+
+[node name="LeftHandGoal" type="Marker3D" parent="Armature/Skeleton3D" unique_id=1859939471]
+
+[node name="LeftHandGoalSync" type="SkeletonModifier3D" parent="Armature/Skeleton3D" node_paths=PackedStringArray("source", "attachment", "goal") unique_id=953343278]
+script = ExtResource("6_l7s2y")
+source = NodePath("../RightHand/SwordBronzeModel/LeftHandTarget")
+attachment = NodePath("../RightHand")
+goal = NodePath("../LeftHandGoal")
+
+[node name="LeftHandIK" type="FABRIK3D" parent="Armature/Skeleton3D" unique_id=1296047381]
+influence = 0.0
+setting_count = 1
+settings/0/target_node = NodePath("../LeftHandGoal")
+max_iterations = 10
+angular_delta_limit = 3.1415927
+deterministic = true
+settings/0/root_bone_name = "clavicle_l"
+settings/0/end_bone_name = "hand_l"
+
+[node name="LeftHandGrip" type="SkeletonModifier3D" parent="Armature/Skeleton3D" node_paths=PackedStringArray("target", "ik") unique_id=1048376259]
+script = ExtResource("5_g1r9p")
+target = NodePath("../LeftHandGoal")
+ik = NodePath("../LeftHandIK")
+
+[node name="Back" type="BoneAttachment3D" parent="Armature/Skeleton3D" unique_id=1320876459]
+bone_name = "spine_01"
+
+[node name="SwordOnBack" parent="Armature/Skeleton3D/Back" unique_id=948271635 instance=ExtResource("3_s0b7z")]
+visible = false
+transform = Transform3D(0.6880724, 0.62512064, -0.3684843, 0.71093696, -0.6824555, 0.16977401, -0.14534491, -0.37878585, -0.91400003, -0.281031, 0.49927664, -0.09078662)

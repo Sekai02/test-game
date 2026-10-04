@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://tv5vm50l7hm1"]
-
-[ext_resource type="PackedScene" uid="uid://bolx5n5od2qpi" path="res://assets/image/3d/glb/char.glb" id="1_4qed6"]
-
-[node name="CharModel" unique_id=1435086922 instance=ExtResource("1_4qed6")]

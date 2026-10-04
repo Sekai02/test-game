@@ -1,6 +1,66 @@
 [gd_scene format=3 uid="uid://5uf6w7g44500"]
 
 [ext_resource type="Script" uid="uid://cg1b31aih20fi" path="res://objects/player.gd" id="1_eqqp1"]
+[ext_resource type="PackedScene" uid="uid://c21qg8ra5wce3" path="res://assets/image/3d/inherit_models/char_male_model.tscn" id="2_m4l3c"]
+[ext_resource type="PackedScene" uid="uid://b2epom3db4lfq" path="res://assets/image/3d/inherit_models/char_female_model.tscn" id="3_f3m4l"]
+[ext_resource type="Script" uid="uid://di3aug0e2vwmm" path="res://scripts/state_machine/state_machine.gd" id="4_s7m4c"]
+[ext_resource type="Script" uid="uid://bivok4i5kw0fc" path="res://objects/player_states/idle.gd" id="5_i1d3l"]
+[ext_resource type="Script" uid="uid://c640gcg4kwnc8" path="res://objects/player_states/move.gd" id="6_r4n0p"]
+[ext_resource type="Script" uid="uid://bpl46xx8cklxq" path="res://objects/player_states/action_state.gd" id="7_a2c7s"]
+[ext_resource type="Script" uid="uid://b01uninkfiavi" path="res://objects/player_states/block.gd" id="8_b1l0k"]
+[ext_resource type="Script" uid="uid://bmwiskpvw87nl" path="res://objects/player_states/death.gd" id="9_d3a7h"]
+[ext_resource type="Script" uid="uid://c56thxd8qsoa6" path="res://objects/player_states/knockdown.gd" id="10_k0n4d"]
+[ext_resource type="Script" uid="uid://d2wxx578p58ar" path="res://objects/player_states/attack.gd" id="11_a7t4k"]
+[ext_resource type="Script" uid="uid://cmi1eplyfqpxl" path="res://objects/player_states/get_up.gd" id="13_g3t0p"]
+[ext_resource type="Script" uid="uid://xtf7t1b4l0p" path="res://objects/player_states/draw_sword.gd" id="14_d4w5d"]
+[ext_resource type="Script" uid="uid://y44xw8rkqdid" path="res://objects/player_states/sheathe_sword.gd" id="15_s7t8h"]
+[ext_resource type="Script" uid="uid://crdsqkwyg7lvi" path="res://objects/player_states/roll.gd" id="16_r0l1l"]
 
 [node name="Player" type="RigidBody3D" unique_id=505320710]
 script = ExtResource("1_eqqp1")
+
+[node name="CharMaleModel" parent="." unique_id=1347920586 instance=ExtResource("2_m4l3c")]
+
+[node name="CharFemaleModel" parent="." unique_id=620185473 instance=ExtResource("3_f3m4l")]
+visible = false
+
+[node name="StateMachine" type="Node" parent="." unique_id=1718264530]
+script = ExtResource("4_s7m4c")
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=284716093]
+script = ExtResource("5_i1d3l")
+
+[node name="Move" type="Node" parent="StateMachine" unique_id=1936402851]
+script = ExtResource("6_r4n0p")
+
+[node name="Roll" type="Node" parent="StateMachine" unique_id=751938264]
+script = ExtResource("16_r0l1l")
+
+[node name="Attack" type="Node" parent="StateMachine" unique_id=1402957318]
+script = ExtResource("11_a7t4k")
+
+[node name="Block" type="Node" parent="StateMachine" unique_id=619384725]
+script = ExtResource("8_b1l0k")
+
+[node name="Consume" type="Node" parent="StateMachine" unique_id=1284069573]
+script = ExtResource("7_a2c7s")
+animationNames = Array[StringName]([&"consume"])
+
+[node name="Hit" type="Node" parent="StateMachine" unique_id=903857162]
+script = ExtResource("7_a2c7s")
+animationNames = Array[StringName]([&"hit_1", &"hit_2"])
+
+[node name="Knockdown" type="Node" parent="StateMachine" unique_id=1829406175]
+script = ExtResource("10_k0n4d")
+
+[node name="GetUp" type="Node" parent="StateMachine" unique_id=447203918]
+script = ExtResource("13_g3t0p")
+
+[node name="Death" type="Node" parent="StateMachine" unique_id=1573920486]
+script = ExtResource("9_d3a7h")
+
+[node name="DrawSword" type="Node" parent="StateMachine" unique_id=1739204856]
+script = ExtResource("14_d4w5d")
+
+[node name="SheatheSword" type="Node" parent="StateMachine" unique_id=610482937]
+script = ExtResource("15_s7t8h")

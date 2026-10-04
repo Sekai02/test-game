@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cuct8goejgqrg"]
+
+[ext_resource type="PackedScene" uid="uid://5uf6w7g44500" path="res://objects/player.tscn" id="1_p7t3s"]
+[ext_resource type="PackedScene" uid="uid://b8l5ye3fo0ewi" path="res://components/follow_char.tscn" id="2_f0l1c"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p7t3s"]
+
+[sub_resource type="Sky" id="Sky_p7t3s"]
+sky_material = SubResource("ProceduralSkyMaterial_p7t3s")
+
+[sub_resource type="Environment" id="Environment_p7t3s"]
+background_mode = 2
+sky = SubResource("Sky_p7t3s")
+ambient_light_source = 3
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7t3s"]
+albedo_color = Color(0.35, 0.4, 0.3, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_p7t3s"]
+material = SubResource("StandardMaterial3D_p7t3s")
+size = Vector2(40, 40)
+subdivide_width = 1
+subdivide_depth = 1
+
+[node name="PlayerTest" type="Node3D" unique_id=1592048371]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=742815906]
+environment = SubResource("Environment_p7t3s")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1283746510]
+transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 0, 3, 0)
+shadow_enabled = true
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=358129467]
+mesh = SubResource("PlaneMesh_p7t3s")
+
+[node name="Player" parent="." unique_id=1974620385 instance=ExtResource("1_p7t3s")]
+freeze = true
+
+[node name="FollowChar" parent="." node_paths=PackedStringArray("player") unique_id=816340275 instance=ExtResource("2_f0l1c")]
+player = NodePath("../Player")
